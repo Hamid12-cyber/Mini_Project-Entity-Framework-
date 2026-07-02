@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/Presentation/">
+    <Project Path="Presentation/Mini_Project(Entitiy Framework).ConsoleApp/Mini_Project(Entitiy Framework).ConsoleApp.csproj" />
+  </Folder>
+  <Folder Name="/Src/" />
+  <Folder Name="/Src/Core/">
+    <Project Path="Src/Core/Mini_Project(Entitiy Framework).Applications/Mini_Project(Entitiy Framework).Applications.csproj" />
+    <Project Path="Src/Core/Mini_Project(Entitiy Framework).Domain/Mini_Project(Entitiy Framework).Domain.csproj" />
+  </Folder>
+  <Folder Name="/Src/Infratructure/">
+    <Project Path="Src/Infrastructure/Mini_Project(Entitiy Framework).Persistence/Mini_Project(Entitiy Framework).Persistence.csproj" />
+  </Folder>
+</Solution>

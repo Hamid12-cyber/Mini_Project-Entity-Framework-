@@ -1,0 +1,19 @@
+﻿using Mini_Project_Entitiy_Framework_.Domain.Entities.Common;
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Mini_Project_Entitiy_Framework_.Domain.Entities
+{
+    internal class Book: BaseEntity
+    {
+        public string Name { get; set; } = string.Empty;
+        public int PageCount { get; set; }
+        public int AuthorId { get; set; }
+        public Author Author { get; set; }
+        public List<ReservedItem> ReservedItems { get; set; } = new();
+            
+    }
+}
