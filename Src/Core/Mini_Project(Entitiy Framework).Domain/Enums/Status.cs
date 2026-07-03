@@ -1,7 +1,7 @@
 ﻿
 namespace Mini_Project_Entitiy_Framework_.Domain.Enums
 {
-    internal enum Status
+    public enum Status
     {
         Confirmed=1,
         Started=2,

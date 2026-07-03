@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Mini_Project_Entitiy_Framework_.Domain.Entities
 {
-    internal abstract class BaseEntity
+    public abstract class BaseEntity
     {
         public int Id { get; set; }
     }

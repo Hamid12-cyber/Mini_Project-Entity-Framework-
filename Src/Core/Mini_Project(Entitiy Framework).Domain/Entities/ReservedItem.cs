@@ -1,4 +1,4 @@
-﻿using Mini_Project_Entitiy_Framework_.Domain.Entities.Common;
+﻿using Mini_Project_Entitiy_Framework_.Domain.Entities;
 using Mini_Project_Entitiy_Framework_.Domain.Enums;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace Mini_Project_Entitiy_Framework_.Domain.Entities
 {
-    internal class ReservedItem: BaseEntity
+    public class ReservedItem: BaseEntity
     {
         public string FinCode { get; set; } = string.Empty;
         public DateTime StartDate { get; set; }

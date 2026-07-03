@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "7a+Saq9G7og=",
+  "dgSpecHash": "ryIpYD+MA/E=",
   "success": true,
-  "projectFilePath": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Core\\Mini_Project(Entitiy Framework).Applications\\Mini_Project(Entitiy Framework).Applications.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Core\\Mini_Project(Entitiy Framework).Applications\\Mini_Project(Entitiy Framework).Application.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Asus\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\9.0.0\\microsoft.extensions.dependencyinjection.abstractions.9.0.0.nupkg.sha512"
+  ],
   "logs": []
 }

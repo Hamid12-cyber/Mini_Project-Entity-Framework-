@@ -1,4 +1,4 @@
-﻿using Mini_Project_Entitiy_Framework_.Domain.Entities.Common;
+﻿using Mini_Project_Entitiy_Framework_.Domain.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Mini_Project_Entitiy_Framework_.Domain.Entities
 {
-    internal class Book: BaseEntity
+    public class Book: BaseEntity
     {
         public string Name { get; set; } = string.Empty;
         public int PageCount { get; set; }

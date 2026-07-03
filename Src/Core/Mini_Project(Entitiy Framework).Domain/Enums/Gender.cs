@@ -1,7 +1,7 @@
 ﻿
 namespace Mini_Project_Entitiy_Framework_.Domain.Enums
 {
-    internal enum Gender
+    public enum Gender
     {
         Female = 1,
         Male = 2,
