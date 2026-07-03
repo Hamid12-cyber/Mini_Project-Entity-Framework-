@@ -8,4 +8,18 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.28">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" Version="8.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\Core\Mini_Project(Entitiy Framework).Domain\Mini_Project(Entitiy Framework).Domain.csproj" />
+    <ProjectReference Include="..\..\Src\Core\Mini_Project(Entitiy Framework).Application\Mini_Project(Entitiy Framework).Application.csproj" />
+    <ProjectReference Include="..\..\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\Mini_Project(Entitiy Framework).Persistence.csproj" />
+  </ItemGroup>
+
 </Project>

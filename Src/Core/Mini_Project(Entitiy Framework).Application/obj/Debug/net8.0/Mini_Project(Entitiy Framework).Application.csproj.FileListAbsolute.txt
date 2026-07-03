@@ -1,0 +1,16 @@
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Application.deps.json
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Application.dll
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Application.pdb
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.dll
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.pdb
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Application.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Application.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Application.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Application.AssemblyInfo.cs
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Application.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Application.sourcelink.json
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\obj\Debug\net8.0\Mini_Pro.44F98E96.Up2Date
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Application.dll
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\obj\Debug\net8.0\refint\Mini_Project(Entitiy Framework).Application.dll
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Application.pdb
+C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Application\obj\Debug\net8.0\ref\Mini_Project(Entitiy Framework).Application.dll

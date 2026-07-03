@@ -2,9 +2,9 @@
 using Mini_Project_Entitiy_Framework_.Persistence.Data;
 
 
-namespace Mini_Project_Entitiy_Framework_.Persistence.Repositories
+namespace Mini_Project_Entitiy_Framework_.Persistence.Implementation.Common
 {
-    internal class GenericRepository
+    public class GenericRepository<T> where T : class
     {
         protected readonly LibraryDbContext Context;
         protected readonly DbSet<T> DbSet;

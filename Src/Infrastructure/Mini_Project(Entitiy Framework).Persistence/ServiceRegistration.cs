@@ -2,18 +2,15 @@
 using Microsoft.Extensions.DependencyInjection;
 using Mini_Project_Entitiy_Framework_.Persistence.Data;
 using Mini_Project_Entitiy_Framework_.Persistence.Implementation.Repositories;
-using Mini_Project_Entitiy_Framework_.Applications.Interfaces.Repositories;
-using Mini_Project_Entitiy_Framework_.Persistence;
-using Mini_Project_Entitiy_Framework_.Infrastructure.Repositories;
+using Mini_Project_Entitiy_Framework_.Application.Interfaces.Repositories;
 
-namespace OnlineLibrary.Infrastructure;
+namespace Mini_Project_Entitiy_Framework_.Persistence;
 
 public static class ServiceRegistration
 {
-    public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, string connectionString)
+    public static IServiceCollection AddInfrastructureServices(this IServiceCollection services)
     {
-        services.AddDbContext<LibraryDbContext>(options =>
-            options.UseSqlite(connectionString));
+        services.AddDbContext<LibraryDbContext>();
 
         services.AddScoped<IBookRepository, BookRepository>();
         services.AddScoped<IAuthorRepository, AuthorRepository>();

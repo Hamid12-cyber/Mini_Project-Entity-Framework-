@@ -4,7 +4,7 @@
   </Folder>
   <Folder Name="/Src/" />
   <Folder Name="/Src/Core/">
-    <Project Path="Src/Core/Mini_Project(Entitiy Framework).Applications/Mini_Project(Entitiy Framework).Applications.csproj" />
+    <Project Path="Src/Core/Mini_Project(Entitiy Framework).Application/Mini_Project(Entitiy Framework).Application.csproj" />
     <Project Path="Src/Core/Mini_Project(Entitiy Framework).Domain/Mini_Project(Entitiy Framework).Domain.csproj" />
   </Folder>
   <Folder Name="/Src/Infratructure/">

@@ -2,7 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Mini_Project_Entitiy_Framework_.Domain.Entities;
 
-namespace OnlineLibrary.Infrastructure.Persistence.Configurations;
+namespace Mini_Project_Entitiy_Framework_.Persistence.Data.Configurations;
 
 public class BookConfiguration : IEntityTypeConfiguration<Book>
 {

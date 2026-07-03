@@ -9,12 +9,12 @@ using System.Threading.Tasks;
 
 namespace Mini_Project_Entitiy_Framework_.Persistence.Data
 {
-    internal class LibraryDbContext : DbContext
+    public class LibraryDbContext : DbContext
     {
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
             base.OnConfiguring(optionsBuilder);
-            optionsBuilder.UseSqlServer("server=localhost\\SQLEXPRESS;database=LibraryDbOnline;trusted_connection=true;integrated security=true;trustserversertificate=true;");
+            optionsBuilder.UseSqlServer("server=localhost\\SQLEXPRESS;database=LibraryDbOnline;trusted_connection=true;integrated security=true;TrustServerCertificate=true;");
 
         }
         protected override void OnModelCreating(ModelBuilder modelBuilder)

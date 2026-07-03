@@ -1,8 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Mini_Project_Entitiy_Framework_.Persistence.Data;
-using OnlineLibrary.Application.Interfaces.Repositories;
-using OnlineLibrary.Domain.Entities;
-using OnlineLibrary.Infrastructure.Persistence;
+using Mini_Project_Entitiy_Framework_.Persistence.Implementation.Common;
+using Mini_Project_Entitiy_Framework_.Application.Interfaces.Repositories;
+using Mini_Project_Entitiy_Framework_.Domain.Entities;
 
 namespace Mini_Project_Entitiy_Framework_.Persistence.Implementation.Repositories;
 

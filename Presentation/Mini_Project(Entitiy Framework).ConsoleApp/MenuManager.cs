@@ -1,13 +1,10 @@
 ﻿using Microsoft.Extensions.DependencyInjection;
-using OnlineLibrary.Application.Exceptions;
-using OnlineLibrary.Application.Interfaces.Services;
-using OnlineLibrary.Domain.Enums;
-using System.ComponentModel.DataAnnotations;
+using Mini_Project_Entitiy_Framework_.Application.Exceptions;
+using Mini_Project_Entitiy_Framework_.Application.Interfaces.Services;
+using Mini_Project_Entitiy_Framework_.Domain.Enums;
 using System.Globalization;
-using System.Net.NetworkInformation;
-using System.Reflection;
 
-namespace OnlineLibrary.ConsoleApp;
+namespace Mini_Project_Entitiy_Framework_.ConsoleApp;
 
 public class MenuManager
 {

@@ -12,7 +12,7 @@ namespace Mini_Project_Entitiy_Framework_.Domain.Entities
         public string Name { get; set; } = string.Empty;
         public int PageCount { get; set; }
         public int AuthorId { get; set; }
-        public Author Author { get; set; }
+        public Author Author { get; set; } = null!;
         public List<ReservedItem> ReservedItems { get; set; } = new();
             
     }

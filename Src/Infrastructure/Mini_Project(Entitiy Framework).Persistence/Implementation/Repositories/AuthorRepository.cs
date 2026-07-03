@@ -1,6 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Mini_Project_Entitiy_Framework_.Persistence.Data;
+using Mini_Project_Entitiy_Framework_.Persistence.Implementation.Common;
 using Mini_Project_Entitiy_Framework_.Domain.Entities;
+using Mini_Project_Entitiy_Framework_.Application.Interfaces.Repositories;
 
 
 namespace Mini_Project_Entitiy_Framework_.Persistence.Implementation.Repositories;

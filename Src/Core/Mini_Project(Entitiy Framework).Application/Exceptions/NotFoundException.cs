@@ -1,0 +1,8 @@
+﻿
+namespace Mini_Project_Entitiy_Framework_.Application.Exceptions
+{
+    public class NotFoundException : Exception
+    {
+        public NotFoundException(string message) : base(message) { }
+    }
+}
