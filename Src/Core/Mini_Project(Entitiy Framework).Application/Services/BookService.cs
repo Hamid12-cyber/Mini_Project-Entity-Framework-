@@ -31,7 +31,6 @@ public class BookService : IBookService
         if (pageCount <= 0)
             throw new ValidationException("Səhifə sayı müsbət ədəd olmalıdır.");
 
-        // Mütləq: göndərilən AuthorId-nin mövcud olub olmadığını yoxlayırıq.
         var author = _authorRepository.GetById(authorId);
         if (author is null)
             throw new NotFoundException($"Id-si {authorId} olan Author tapılmadı.");

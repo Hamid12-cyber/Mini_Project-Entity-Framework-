@@ -3,8 +3,24 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{D93294E3-BCDB-3EBE-5CB3-B60443EED92B}|Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Mini_Project(Entitiy Framework).ConsoleApp.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\presentation\\mini_project(entitiy framework).consoleapp\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D93294E3-BCDB-3EBE-5CB3-B60443EED92B}|Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Mini_Project(Entitiy Framework).ConsoleApp.csproj|solutionrelative:presentation\\mini_project(entitiy framework).consoleapp\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\src\\infrastructure\\mini_project(entitiy framework).persistence\\data\\migrations\\20260703200346_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|solutionrelative:src\\infrastructure\\mini_project(entitiy framework).persistence\\data\\migrations\\20260703200346_initial.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{D93294E3-BCDB-3EBE-5CB3-B60443EED92B}|Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Mini_Project(Entitiy Framework).ConsoleApp.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\presentation\\mini_project(entitiy framework).consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D93294E3-BCDB-3EBE-5CB3-B60443EED92B}|Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Mini_Project(Entitiy Framework).ConsoleApp.csproj|solutionrelative:presentation\\mini_project(entitiy framework).consoleapp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{24DC9EF1-4BD3-E644-A4DF-847D7F28D503}|Src\\Core\\Mini_Project(Entitiy Framework).Application\\Mini_Project(Entitiy Framework).Application.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\src\\core\\mini_project(entitiy framework).application\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24DC9EF1-4BD3-E644-A4DF-847D7F28D503}|Src\\Core\\Mini_Project(Entitiy Framework).Application\\Mini_Project(Entitiy Framework).Application.csproj|solutionrelative:src\\core\\mini_project(entitiy framework).application\\services\\bookservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\src\\infrastructure\\mini_project(entitiy framework).persistence\\data\\configurations\\bookconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|solutionrelative:src\\infrastructure\\mini_project(entitiy framework).persistence\\data\\configurations\\bookconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -14,17 +30,69 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Program.cs",
+              "RelativeDocumentMoniker": "Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Program.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Program.cs",
+              "RelativeToolTip": "Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T08:56:54.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 0,
+              "Title": "MenuManager.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\MenuManager.cs",
+              "RelativeDocumentMoniker": "Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\MenuManager.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\MenuManager.cs",
+              "RelativeToolTip": "Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\MenuManager.cs",
+              "ViewState": "AgIAAL4AAAAAAAAAAAAwwNcAAAAyAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T08:13:41.744Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "BookService.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Core\\Mini_Project(Entitiy Framework).Application\\Services\\BookService.cs",
+              "RelativeDocumentMoniker": "Src\\Core\\Mini_Project(Entitiy Framework).Application\\Services\\BookService.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Core\\Mini_Project(Entitiy Framework).Application\\Services\\BookService.cs",
+              "RelativeToolTip": "Src\\Core\\Mini_Project(Entitiy Framework).Application\\Services\\BookService.cs",
+              "ViewState": "AgIAACcAAAAAAAAAAAAQwEoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T08:04:10.771Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "BookConfiguration.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Data\\Configurations\\BookConfiguration.cs",
+              "RelativeDocumentMoniker": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Data\\Configurations\\BookConfiguration.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Data\\Configurations\\BookConfiguration.cs",
+              "RelativeToolTip": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Data\\Configurations\\BookConfiguration.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABcAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-04T07:54:33.551Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "20260703200346_Initial.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Data\\Migrations\\20260703200346_Initial.cs",
               "RelativeDocumentMoniker": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Data\\Migrations\\20260703200346_Initial.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Data\\Migrations\\20260703200346_Initial.cs",
               "RelativeToolTip": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Data\\Migrations\\20260703200346_Initial.cs",
-              "ViewState": "AgIAADwAAAAAAAAAAAAAADcAAAA6AAAAAAAAAA==",
+              "ViewState": "AgIAAD4AAAAAAAAAAAAAAGEAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-07-03T20:03:47.041Z",
               "EditorCaption": ""
