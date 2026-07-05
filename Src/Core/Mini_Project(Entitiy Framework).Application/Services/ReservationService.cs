@@ -76,6 +76,9 @@ public class ReservationService : IReservationService
         if (reservation is null)
             throw new NotFoundException($"Id-si {reservationId} olan Reservation tapılmadı.");
 
+        if (reservation.Status == Status.Canceled)
+            throw new BusinessRuleException("Ləğv edilmiş (Canceled) rezervasiyanın statusu dəyişdirilə bilməz.");
+
         reservation.Status = newStatus;
         _reservedItemRepository.Update(reservation);
         _reservedItemRepository.SaveChanges();
