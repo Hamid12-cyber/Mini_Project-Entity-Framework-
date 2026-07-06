@@ -1,3 +1,22 @@
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.deps.json
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.runtimeconfig.json
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.dll
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.pdb
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Application.dll
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.dll
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Application.pdb
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.pdb
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.AssemblyInfo.cs
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\obj\Debug\net8.0\Mini_Pro.0EED9DCE.Up2Date
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.dll
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\obj\Debug\net8.0\refint\Mini_Project(Entitiy Framework).Persistence.dll
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.pdb
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.genruntimeconfig.cache
+C:\Users\Asus\Desktop\q\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\obj\Debug\net8.0\ref\Mini_Project(Entitiy Framework).Persistence.dll
 C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.deps.json
 C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.runtimeconfig.json
 C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Infrastructure\Mini_Project(Entitiy Framework).Persistence\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Persistence.dll

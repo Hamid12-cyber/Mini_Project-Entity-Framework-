@@ -1,3 +1,15 @@
+C:\Users\Asus\Desktop\q\Src\Core\Mini_Project(Entitiy Framework).Domain\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.deps.json
+C:\Users\Asus\Desktop\q\Src\Core\Mini_Project(Entitiy Framework).Domain\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.dll
+C:\Users\Asus\Desktop\q\Src\Core\Mini_Project(Entitiy Framework).Domain\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.pdb
+C:\Users\Asus\Desktop\q\Src\Core\Mini_Project(Entitiy Framework).Domain\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.csproj.AssemblyReference.cache
+C:\Users\Asus\Desktop\q\Src\Core\Mini_Project(Entitiy Framework).Domain\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Asus\Desktop\q\Src\Core\Mini_Project(Entitiy Framework).Domain\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.AssemblyInfoInputs.cache
+C:\Users\Asus\Desktop\q\Src\Core\Mini_Project(Entitiy Framework).Domain\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.AssemblyInfo.cs
+C:\Users\Asus\Desktop\q\Src\Core\Mini_Project(Entitiy Framework).Domain\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.csproj.CoreCompileInputs.cache
+C:\Users\Asus\Desktop\q\Src\Core\Mini_Project(Entitiy Framework).Domain\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.dll
+C:\Users\Asus\Desktop\q\Src\Core\Mini_Project(Entitiy Framework).Domain\obj\Debug\net8.0\refint\Mini_Project(Entitiy Framework).Domain.dll
+C:\Users\Asus\Desktop\q\Src\Core\Mini_Project(Entitiy Framework).Domain\obj\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.pdb
+C:\Users\Asus\Desktop\q\Src\Core\Mini_Project(Entitiy Framework).Domain\obj\Debug\net8.0\ref\Mini_Project(Entitiy Framework).Domain.dll
 C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Domain\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.deps.json
 C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Domain\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.dll
 C:\Users\Asus\Desktop\Mini_Project(Entity)\Mini_Project(Entitiy Framework)\Src\Core\Mini_Project(Entitiy Framework).Domain\bin\Debug\net8.0\Mini_Project(Entitiy Framework).Domain.pdb

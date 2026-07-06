@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Mini_Project_Entitiy_Framework_.Persistence.Data;
 using Mini_Project_Entitiy_Framework_.Persistence.Implementation.Common;
+using Mini_Project_Entitiy_Framework_.Persistence.JsonServices;
 using Mini_Project_Entitiy_Framework_.Application.Interfaces.Repositories;
 using Mini_Project_Entitiy_Framework_.Domain.Entities;
 using Mini_Project_Entitiy_Framework_.Domain.Enums;
@@ -9,7 +10,7 @@ namespace Mini_Project_Entitiy_Framework_.Persistence.Implementation.Repositorie
 
 public class ReservedItemRepository : GenericRepository<ReservedItem>, IReservedItemRepository
 {
-    public ReservedItemRepository(LibraryDbContext context) : base(context) { }
+    public ReservedItemRepository(LibraryDbContext context) : base(context, new ReservedItemJsonRepository()) { }
 
     public List<ReservedItem> GetAllWithBook()
     {
@@ -47,4 +48,5 @@ public class ReservedItemRepository : GenericRepository<ReservedItem>, IReserved
             r.BookId == bookId &&
             (r.Status == Status.Confirmed || r.Status == Status.Started));
     }
+    protected override List<ReservedItem> GetDataForBackup() => GetAllWithBook();
 }

@@ -1,5 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Mini_Project_Entitiy_Framework_.Persistence.Data;
+using Mini_Project_Entitiy_Framework_.Persistence.JsonServices;
+using System.Threading.Tasks;
 
 
 namespace Mini_Project_Entitiy_Framework_.Persistence.Implementation.Common
@@ -8,11 +10,13 @@ namespace Mini_Project_Entitiy_Framework_.Persistence.Implementation.Common
     {
         protected readonly LibraryDbContext Context;
         protected readonly DbSet<T> DbSet;
+        protected readonly JsonRepository<T> JsonRepository;
 
-        public GenericRepository(LibraryDbContext context)
+        public GenericRepository(LibraryDbContext context, JsonRepository<T> jsonRepository)
         {
             Context = context;
             DbSet = context.Set<T>();
+            JsonRepository = jsonRepository;
         }
 
         public T? GetById(int id) => DbSet.Find(id);
@@ -25,6 +29,15 @@ namespace Mini_Project_Entitiy_Framework_.Persistence.Implementation.Common
 
         public void Delete(T entity) => DbSet.Remove(entity);
 
-        public int SaveChanges() => Context.SaveChanges();
+        public int SaveChanges()
+        {
+            var result = Context.SaveChanges();
+
+            var backupData = GetDataForBackup();
+            Task.Run(() => JsonRepository.Serialize(backupData));
+
+            return result;
+        }
+        protected virtual List<T> GetDataForBackup() => DbSet.ToList();
     }
 }

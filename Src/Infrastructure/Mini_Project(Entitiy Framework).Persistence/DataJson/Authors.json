@@ -1,0 +1,119 @@
+[
+  {
+    "Name": "Fydor Dostayevski",
+    "Surname": "xxx",
+    "Gender": "Male",
+    "Books": [
+      {
+        "Name": "Saqqallı uşaq",
+        "PageCount": 200,
+        "AuthorId": 1,
+        "ReservedItems": [],
+        "Id": 5
+      }
+    ],
+    "Id": 1
+  },
+  {
+    "Name": "Çingiz Ayıtmatov",
+    "Surname": null,
+    "Gender": "Male",
+    "Books": [
+      {
+        "Name": "Gün var mürə bədəl",
+        "PageCount": 150,
+        "AuthorId": 2,
+        "ReservedItems": [],
+        "Id": 3
+      },
+      {
+        "Name": "Gün var ömürə bədəl",
+        "PageCount": 200,
+        "AuthorId": 2,
+        "ReservedItems": [],
+        "Id": 9
+      }
+    ],
+    "Id": 2
+  },
+  {
+    "Name": "Fydor",
+    "Surname": "Dostoyevski",
+    "Gender": "Unknown",
+    "Books": [
+      {
+        "Name": "Mendes",
+        "PageCount": 120,
+        "AuthorId": 3,
+        "ReservedItems": [],
+        "Id": 10
+      },
+      {
+        "Name": "Pure love",
+        "PageCount": 10,
+        "AuthorId": 3,
+        "ReservedItems": [],
+        "Id": 12
+      }
+    ],
+    "Id": 3
+  },
+  {
+    "Name": "Süleyman",
+    "Surname": "Axundov",
+    "Gender": "Male",
+    "Books": [],
+    "Id": 4
+  },
+  {
+    "Name": "Cəlil",
+    "Surname": "Məmmədquluzadə",
+    "Gender": "Male",
+    "Books": [
+      {
+        "Name": "Qaraca qız",
+        "PageCount": 190,
+        "AuthorId": 5,
+        "ReservedItems": [],
+        "Id": 6
+      }
+    ],
+    "Id": 5
+  },
+  {
+    "Name": "Müslüm",
+    "Surname": "Gürses",
+    "Gender": "Male",
+    "Books": [
+      {
+        "Name": "Adını sen koy",
+        "PageCount": 100,
+        "AuthorId": 6,
+        "ReservedItems": [],
+        "Id": 8
+      },
+      {
+        "Name": "Ömür bumu",
+        "PageCount": 10,
+        "AuthorId": 6,
+        "ReservedItems": [],
+        "Id": 11
+      }
+    ],
+    "Id": 6
+  },
+  {
+    "Name": "Robert Kiyosaki",
+    "Surname": "XXX",
+    "Gender": "Unknown",
+    "Books": [],
+    "Id": 7
+  },
+  {
+    "Name": "Şafak",
+    "Surname": "Sezer",
+    "Gender": "Male",
+    "Books": [],
+    "Id": 8
+  }
+]

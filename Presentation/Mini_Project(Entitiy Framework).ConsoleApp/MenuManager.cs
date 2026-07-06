@@ -87,9 +87,6 @@ public class MenuManager
         ConsoleAnimation.Print("Proqram bitdi. Sağ olun!", ConsoleColor.White);
     }
 
-    // --- DAXİLETME METODLARI ---
-    // 1 = Düzgün məlumat, 0 = Bir addım geriyə (0), -1 = Ana menyu (00)
-
     private static void PauseOnError()
     {
         ConsoleAnimation.Write("Davam etmək üçün istənilən düyməyə basın...", ConsoleColor.Yellow);
@@ -221,9 +218,6 @@ public class MenuManager
         PauseOnError();
         return 2;
     }
-
-    // --- KİTAB METODLARI ---
-
     private static void CreateBook(IServiceProvider provider)
     {
         var bookService = provider.GetRequiredService<IBookService>();
@@ -254,7 +248,24 @@ public class MenuManager
             else if (step == 3)
             {
                 Console.WriteLine($"Kitabın adı: {name}");
-                Console.WriteLine($"Səhifə sayı: {pageCount}");
+                Console.WriteLine($"Səhifə sayı: {pageCount}\n");
+
+                var authorService = provider.GetRequiredService<IAuthorService>();
+                var authors = authorService.GetAllAuthors();
+
+                if (authors.Count == 0)
+                {
+                    ConsoleAnimation.Warning("Heç bir Author yoxdur. Əvvəlcə Author yaratmalısınız.");
+                    Console.ReadLine();
+                    step--;
+                    continue;
+                }
+
+                Author.PrintHeader();
+                foreach (var a in authors) a.PrintInfo();
+                Author.PrintFooter();
+                Console.WriteLine();
+
                 int status = InputInt("Author Id", out authorId);
                 if (status == -1) return;
                 if (status == 0) { step--; continue; }
@@ -278,6 +289,7 @@ public class MenuManager
         Console.Clear();
         ConsoleAnimation.Print("--- Kitabın Silinməsi ---\n", ConsoleColor.Yellow);
         var bookService = provider.GetRequiredService<IBookService>();
+        var reservationService = provider.GetRequiredService<IReservationService>();
 
         var books = bookService.GetAllBooks();
         if (books.Count == 0)
@@ -286,10 +298,30 @@ public class MenuManager
             return;
         }
 
+        var activeBookIds = reservationService.GetReservationList()
+            .Where(r => r.Status == Status.Confirmed || r.Status == Status.Started)
+            .Select(r => r.BookId)
+            .ToHashSet();
+
         Book.PrintHeader();
         foreach (var b in books) b.PrintInfo();
         Book.PrintFooter();
         Console.WriteLine();
+
+        if (activeBookIds.Count > 0)
+        {
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write("Aktiv rezervasiyası olan (");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write("Silinə Bilməyən");
+            Console.ForegroundColor = ConsoleColor.Yellow;
+            Console.Write(") Kitab Id-ləri: ");
+            Console.ForegroundColor = ConsoleColor.Red;
+            Console.Write(string.Join(", ", activeBookIds.OrderBy(x => x)));
+            Console.ResetColor();
+            Console.WriteLine();
+            Console.WriteLine();
+        }
 
         int id;
         while (true)
@@ -365,9 +397,6 @@ public class MenuManager
         foreach (var b in books) b.PrintInfo();
         Book.PrintFooter();
     }
-
-    // --- MÜƏLLİF METODLARI ---
-
     private static void CreateAuthor(IServiceProvider provider)
     {
         var authorService = provider.GetRequiredService<IAuthorService>();
@@ -451,32 +480,47 @@ public class MenuManager
 
     private static void ShowAuthorBooks(IServiceProvider provider)
     {
-        Console.Clear();
-        ConsoleAnimation.Print("--- Müəllifin Kitabları ---\n", ConsoleColor.Yellow);
         var authorService = provider.GetRequiredService<IAuthorService>();
 
-        int id;
         while (true)
         {
+            Console.Clear();
+            ConsoleAnimation.Print("--- Müəllifin Kitabları ---\n", ConsoleColor.Yellow);
+
+            var authors = authorService.GetAllAuthors();
+            if (authors.Count == 0)
+            {
+                ConsoleAnimation.Warning("Heç bir author yoxdur.");
+                return;
+            }
+
+            Author.PrintHeader();
+            foreach (var a in authors) a.PrintInfo();
+            Author.PrintFooter();
+            Console.WriteLine();
+
+            int id;
             int status = InputInt("Author Id", out id);
             if (status == -1 || status == 0) return;
-            if (status == 1) break;
-        }
+            if (status == 2) continue;
 
-        var books = authorService.GetAuthorBooks(id);
-        if (books.Count == 0)
-        {
-            ConsoleAnimation.Warning("Bu author-un kitabı yoxdur.");
-            return;
-        }
+            var books = authorService.GetAuthorBooks(id);
+            if (books.Count == 0)
+            {
+                ConsoleAnimation.Warning("Bu author-un kitabı yoxdur.");
+            }
+            else
+            {
+                Book.PrintHeader();
+                foreach (var b in books) b.PrintInfo();
+                Book.PrintFooter();
+            }
 
-        Book.PrintHeader();
-        foreach (var b in books) b.PrintInfo();
-        Book.PrintFooter();
+            ConsoleAnimation.Write("\n  [ Enter - başqa author, 00 - ana menyu ]", ConsoleColor.DarkRed);
+            var cont = Console.ReadLine();
+            if (cont == "00") return;
+        }
     }
-
-    // --- REZERVASIYA METODLARI ---
-
     private static void ReserveBook(IServiceProvider provider)
     {
         var reservationService = provider.GetRequiredService<IReservationService>();

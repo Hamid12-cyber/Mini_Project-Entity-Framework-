@@ -1,0 +1,277 @@
+[
+  {
+    "FinCode": "4jdjfgn",
+    "StartDate": "2026-10-12T00:00:00",
+    "EndDate": "2026-10-15T00:00:00",
+    "BookId": 3,
+    "Book": {
+      "Name": "Gün var mürə bədəl",
+      "PageCount": 150,
+      "AuthorId": 2,
+      "Author": {
+        "Name": "Çingiz Ayıtmatov",
+        "Surname": null,
+        "Gender": "Male",
+        "Books": [
+          {
+            "Name": "Gün var ömürə bədəl",
+            "PageCount": 200,
+            "AuthorId": 2,
+            "ReservedItems": [
+              {
+                "FinCode": "6M3788G",
+                "StartDate": "2026-10-12T00:00:00",
+                "EndDate": "2026-11-10T00:00:00",
+                "BookId": 9,
+                "Status": "Confirmed",
+                "Id": 7
+              }
+            ],
+            "Id": 9
+          }
+        ],
+        "Id": 2
+      },
+      "ReservedItems": [
+        {
+          "FinCode": "jdmkdc",
+          "StartDate": "2026-12-25T00:00:00",
+          "EndDate": "2026-12-26T00:00:00",
+          "BookId": 3,
+          "Status": "Confirmed",
+          "Id": 2
+        },
+        {
+          "FinCode": "ssnnaj1",
+          "StartDate": "2026-10-31T00:00:00",
+          "EndDate": "2026-11-01T00:00:00",
+          "BookId": 3,
+          "Status": "Completed",
+          "Id": 3
+        }
+      ],
+      "Id": 3
+    },
+    "Status": "Started",
+    "Id": 1
+  },
+  {
+    "FinCode": "jdmkdc",
+    "StartDate": "2026-12-25T00:00:00",
+    "EndDate": "2026-12-26T00:00:00",
+    "BookId": 3,
+    "Book": {
+      "Name": "Gün var mürə bədəl",
+      "PageCount": 150,
+      "AuthorId": 2,
+      "Author": {
+        "Name": "Çingiz Ayıtmatov",
+        "Surname": null,
+        "Gender": "Male",
+        "Books": [
+          {
+            "Name": "Gün var ömürə bədəl",
+            "PageCount": 200,
+            "AuthorId": 2,
+            "ReservedItems": [
+              {
+                "FinCode": "6M3788G",
+                "StartDate": "2026-10-12T00:00:00",
+                "EndDate": "2026-11-10T00:00:00",
+                "BookId": 9,
+                "Status": "Confirmed",
+                "Id": 7
+              }
+            ],
+            "Id": 9
+          }
+        ],
+        "Id": 2
+      },
+      "ReservedItems": [
+        {
+          "FinCode": "4jdjfgn",
+          "StartDate": "2026-10-12T00:00:00",
+          "EndDate": "2026-10-15T00:00:00",
+          "BookId": 3,
+          "Status": "Started",
+          "Id": 1
+        },
+        {
+          "FinCode": "ssnnaj1",
+          "StartDate": "2026-10-31T00:00:00",
+          "EndDate": "2026-11-01T00:00:00",
+          "BookId": 3,
+          "Status": "Completed",
+          "Id": 3
+        }
+      ],
+      "Id": 3
+    },
+    "Status": "Confirmed",
+    "Id": 2
+  },
+  {
+    "FinCode": "ssnnaj1",
+    "StartDate": "2026-10-31T00:00:00",
+    "EndDate": "2026-11-01T00:00:00",
+    "BookId": 3,
+    "Book": {
+      "Name": "Gün var mürə bədəl",
+      "PageCount": 150,
+      "AuthorId": 2,
+      "Author": {
+        "Name": "Çingiz Ayıtmatov",
+        "Surname": null,
+        "Gender": "Male",
+        "Books": [
+          {
+            "Name": "Gün var ömürə bədəl",
+            "PageCount": 200,
+            "AuthorId": 2,
+            "ReservedItems": [
+              {
+                "FinCode": "6M3788G",
+                "StartDate": "2026-10-12T00:00:00",
+                "EndDate": "2026-11-10T00:00:00",
+                "BookId": 9,
+                "Status": "Confirmed",
+                "Id": 7
+              }
+            ],
+            "Id": 9
+          }
+        ],
+        "Id": 2
+      },
+      "ReservedItems": [
+        {
+          "FinCode": "4jdjfgn",
+          "StartDate": "2026-10-12T00:00:00",
+          "EndDate": "2026-10-15T00:00:00",
+          "BookId": 3,
+          "Status": "Started",
+          "Id": 1
+        },
+        {
+          "FinCode": "jdmkdc",
+          "StartDate": "2026-12-25T00:00:00",
+          "EndDate": "2026-12-26T00:00:00",
+          "BookId": 3,
+          "Status": "Confirmed",
+          "Id": 2
+        }
+      ],
+      "Id": 3
+    },
+    "Status": "Completed",
+    "Id": 3
+  },
+  {
+    "FinCode": "7jsanda",
+    "StartDate": "2026-10-31T00:00:00",
+    "EndDate": "2026-11-01T00:00:00",
+    "BookId": 5,
+    "Book": {
+      "Name": "Saqqallı uşaq",
+      "PageCount": 200,
+      "AuthorId": 1,
+      "Author": {
+        "Name": "Fydor Dostayevski",
+        "Surname": "xxx",
+        "Gender": "Male",
+        "Books": [],
+        "Id": 1
+      },
+      "ReservedItems": [],
+      "Id": 5
+    },
+    "Status": "Confirmed",
+    "Id": 4
+  },
+  {
+    "FinCode": "6M3788G",
+    "StartDate": "2026-10-12T00:00:00",
+    "EndDate": "2026-11-10T00:00:00",
+    "BookId": 9,
+    "Book": {
+      "Name": "Gün var ömürə bədəl",
+      "PageCount": 200,
+      "AuthorId": 2,
+      "Author": {
+        "Name": "Çingiz Ayıtmatov",
+        "Surname": null,
+        "Gender": "Male",
+        "Books": [
+          {
+            "Name": "Gün var mürə bədəl",
+            "PageCount": 150,
+            "AuthorId": 2,
+            "ReservedItems": [
+              {
+                "FinCode": "4jdjfgn",
+                "StartDate": "2026-10-12T00:00:00",
+                "EndDate": "2026-10-15T00:00:00",
+                "BookId": 3,
+                "Status": "Started",
+                "Id": 1
+              },
+              {
+                "FinCode": "jdmkdc",
+                "StartDate": "2026-12-25T00:00:00",
+                "EndDate": "2026-12-26T00:00:00",
+                "BookId": 3,
+                "Status": "Confirmed",
+                "Id": 2
+              },
+              {
+                "FinCode": "ssnnaj1",
+                "StartDate": "2026-10-31T00:00:00",
+                "EndDate": "2026-11-01T00:00:00",
+                "BookId": 3,
+                "Status": "Completed",
+                "Id": 3
+              }
+            ],
+            "Id": 3
+          }
+        ],
+        "Id": 2
+      },
+      "ReservedItems": [],
+      "Id": 9
+    },
+    "Status": "Confirmed",
+    "Id": 7
+  },
+  {
+    "FinCode": "LM3ALLE",
+    "StartDate": "2026-07-06T00:00:00",
+    "EndDate": "2026-07-08T00:00:00",
+    "BookId": 12,
+    "Book": {
+      "Name": "Pure love",
+      "PageCount": 10,
+      "AuthorId": 3,
+      "Author": {
+        "Name": "Fydor",
+        "Surname": "Dostoyevski",
+        "Gender": "Unknown",
+        "Books": [
+          {
+            "Name": "Mendes",
+            "PageCount": 120,
+            "AuthorId": 3,
+            "ReservedItems": [],
+            "Id": 10
+          }
+        ],
+        "Id": 3
+      },
+      "ReservedItems": [],
+      "Id": 12
+    },
+    "Status": "Confirmed",
+    "Id": 8
+  }
+]

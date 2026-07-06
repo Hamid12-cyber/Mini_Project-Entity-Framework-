@@ -1,6 +1,7 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using Mini_Project_Entitiy_Framework_.Persistence.Data;
 using Mini_Project_Entitiy_Framework_.Persistence.Implementation.Common;
+using Mini_Project_Entitiy_Framework_.Persistence.JsonServices;
 using Mini_Project_Entitiy_Framework_.Application.Interfaces.Repositories;
 using Mini_Project_Entitiy_Framework_.Domain.Entities;
 
@@ -8,7 +9,7 @@ namespace Mini_Project_Entitiy_Framework_.Persistence.Implementation.Repositorie
 
 public class BookRepository : GenericRepository<Book>, IBookRepository
 {
-    public BookRepository(LibraryDbContext context) : base(context) { }
+    public BookRepository(LibraryDbContext context) : base(context, new BookJsonRepository()) { }
 
     public Book? GetByIdWithDetails(int id)
     {
@@ -29,6 +30,13 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
     {
         return DbSet
             .Where(b => b.AuthorId == authorId)
+            .ToList();
+    }
+    protected override List<Book> GetDataForBackup()
+    {
+        return DbSet
+            .Include(b => b.Author)
+            .Include(b => b.ReservedItems)
             .ToList();
     }
 }

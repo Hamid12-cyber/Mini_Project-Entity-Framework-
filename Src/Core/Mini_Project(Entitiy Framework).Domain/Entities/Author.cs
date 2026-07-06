@@ -12,9 +12,9 @@ namespace Mini_Project_Entitiy_Framework_.Domain.Entities
         public static void PrintHeader()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("  ┌───────┬───────────────────────────────┬───────────┬───────────┐");
-            Console.WriteLine("  │ ID    │ Ad Soyad                      │ Cins      │ Kitab sayı│");
-            Console.WriteLine("  ├───────┼───────────────────────────────┼───────────┼───────────┤");
+            Console.WriteLine("  ┌───────┬─────────────────────────────────┬───────────┬───────────┐");
+            Console.WriteLine("  │ ID    │ Ad Soyad                        │ Cins      │ Kitab sayı│");
+            Console.WriteLine("  ├───────┼─────────────────────────────────┼───────────┼───────────┤");
             Console.ResetColor();
         }
 
@@ -29,7 +29,7 @@ namespace Mini_Project_Entitiy_Framework_.Domain.Entities
         public static void PrintFooter()
         {
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("  └───────┴───────────────────────────────┴───────────┴───────────┘");
+            Console.WriteLine("  └───────┴─────────────────────────────────┴───────────┴───────────┘");
             Console.ResetColor();
         }
     }
