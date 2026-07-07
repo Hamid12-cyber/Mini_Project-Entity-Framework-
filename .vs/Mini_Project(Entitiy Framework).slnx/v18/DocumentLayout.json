@@ -3,40 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\src\\infrastructure\\mini_project(entitiy framework).persistence\\jsonservices\\jsonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|solutionrelative:src\\infrastructure\\mini_project(entitiy framework).persistence\\jsonservices\\jsonrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\src\\infrastructure\\mini_project(entitiy framework).persistence\\implementation\\repositories\\reserveditemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|solutionrelative:src\\infrastructure\\mini_project(entitiy framework).persistence\\implementation\\repositories\\reserveditemrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\src\\infrastructure\\mini_project(entitiy framework).persistence\\implementation\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|solutionrelative:src\\infrastructure\\mini_project(entitiy framework).persistence\\implementation\\repositories\\bookrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\src\\infrastructure\\mini_project(entitiy framework).persistence\\implementation\\repositories\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|solutionrelative:src\\infrastructure\\mini_project(entitiy framework).persistence\\implementation\\repositories\\authorrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\src\\infrastructure\\mini_project(entitiy framework).persistence\\implementation\\common\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|solutionrelative:src\\infrastructure\\mini_project(entitiy framework).persistence\\implementation\\common\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{24DC9EF1-4BD3-E644-A4DF-847D7F28D503}|Src\\Core\\Mini_Project(Entitiy Framework).Application\\Mini_Project(Entitiy Framework).Application.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\src\\core\\mini_project(entitiy framework).application\\services\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{24DC9EF1-4BD3-E644-A4DF-847D7F28D503}|Src\\Core\\Mini_Project(Entitiy Framework).Application\\Mini_Project(Entitiy Framework).Application.csproj|solutionrelative:src\\core\\mini_project(entitiy framework).application\\services\\reservationservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{D93294E3-BCDB-3EBE-5CB3-B60443EED92B}|Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Mini_Project(Entitiy Framework).ConsoleApp.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\presentation\\mini_project(entitiy framework).consoleapp\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{D93294E3-BCDB-3EBE-5CB3-B60443EED92B}|Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Mini_Project(Entitiy Framework).ConsoleApp.csproj|solutionrelative:presentation\\mini_project(entitiy framework).consoleapp\\menumanager.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\src\\infrastructure\\mini_project(entitiy framework).persistence\\datajson\\reserveditems.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|solutionrelative:src\\infrastructure\\mini_project(entitiy framework).persistence\\datajson\\reserveditems.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{24DC9EF1-4BD3-E644-A4DF-847D7F28D503}|Src\\Core\\Mini_Project(Entitiy Framework).Application\\Mini_Project(Entitiy Framework).Application.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\src\\core\\mini_project(entitiy framework).application\\interfaces\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{24DC9EF1-4BD3-E644-A4DF-847D7F28D503}|Src\\Core\\Mini_Project(Entitiy Framework).Application\\Mini_Project(Entitiy Framework).Application.csproj|solutionrelative:src\\core\\mini_project(entitiy framework).application\\interfaces\\repositories\\igenericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\src\\infrastructure\\mini_project(entitiy framework).persistence\\datajson\\authors.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{81AD0A38-8913-BF02-EA24-032D85984D37}|Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Mini_Project(Entitiy Framework).Persistence.csproj|solutionrelative:src\\infrastructure\\mini_project(entitiy framework).persistence\\datajson\\authors.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{D93294E3-BCDB-3EBE-5CB3-B60443EED92B}|Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Mini_Project(Entitiy Framework).ConsoleApp.csproj|c:\\users\\asus\\desktop\\mini_project(entity)\\mini_project(entitiy framework)\\presentation\\mini_project(entitiy framework).consoleapp\\animations\\consoleanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{D93294E3-BCDB-3EBE-5CB3-B60443EED92B}|Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Mini_Project(Entitiy Framework).ConsoleApp.csproj|solutionrelative:presentation\\mini_project(entitiy framework).consoleapp\\animations\\consoleanimation.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -46,122 +22,45 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 0,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "JsonRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\JsonServices\\JsonRepository.cs",
-              "RelativeDocumentMoniker": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\JsonServices\\JsonRepository.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\JsonServices\\JsonRepository.cs",
-              "RelativeToolTip": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\JsonServices\\JsonRepository.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAAABMAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T11:02:49.398Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "ReservedItemRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Repositories\\ReservedItemRepository.cs",
-              "RelativeDocumentMoniker": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Repositories\\ReservedItemRepository.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Repositories\\ReservedItemRepository.cs",
-              "RelativeToolTip": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Repositories\\ReservedItemRepository.cs",
-              "ViewState": "AgIAACgAAAAAAAAAAAAAADEAAAAFAAAAAAAAAA==",
+              "Title": "IGenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Core\\Mini_Project(Entitiy Framework).Application\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "RelativeDocumentMoniker": "Src\\Core\\Mini_Project(Entitiy Framework).Application\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Core\\Mini_Project(Entitiy Framework).Application\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "RelativeToolTip": "Src\\Core\\Mini_Project(Entitiy Framework).Application\\Interfaces\\Repositories\\IGenericRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T11:02:29.865Z",
+              "WhenOpened": "2026-07-07T11:31:03.697Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "BookRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Repositories\\BookRepository.cs",
-              "RelativeDocumentMoniker": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Repositories\\BookRepository.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Repositories\\BookRepository.cs",
-              "RelativeToolTip": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Repositories\\BookRepository.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAAACEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T11:02:18.532Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "AuthorRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Repositories\\AuthorRepository.cs",
-              "RelativeDocumentMoniker": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Repositories\\AuthorRepository.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Repositories\\AuthorRepository.cs",
-              "RelativeToolTip": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Repositories\\AuthorRepository.cs",
-              "ViewState": "AgIAAAcAAAAAAAAAAAAAABoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T11:02:07.995Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Common\\GenericRepository.cs",
-              "RelativeDocumentMoniker": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Common\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Common\\GenericRepository.cs",
-              "RelativeToolTip": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\Implementation\\Common\\GenericRepository.cs",
-              "ViewState": "AgIAACsAAAAAAAAAAAAAACcAAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T11:01:37.702Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "ReservationService.cs",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Core\\Mini_Project(Entitiy Framework).Application\\Services\\ReservationService.cs",
-              "RelativeDocumentMoniker": "Src\\Core\\Mini_Project(Entitiy Framework).Application\\Services\\ReservationService.cs",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Core\\Mini_Project(Entitiy Framework).Application\\Services\\ReservationService.cs",
-              "RelativeToolTip": "Src\\Core\\Mini_Project(Entitiy Framework).Application\\Services\\ReservationService.cs",
-              "ViewState": "AgIAAFIAAAAAAAAAAAAAACsAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T11:00:28.765Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 0,
               "Title": "MenuManager.cs",
               "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\MenuManager.cs",
               "RelativeDocumentMoniker": "Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\MenuManager.cs",
               "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\MenuManager.cs",
               "RelativeToolTip": "Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\MenuManager.cs",
-              "ViewState": "AgIAANQCAAAAAAAAAAAAAAoCAAAFAAAAAAAAAA==",
+              "ViewState": "AgIAAFIBAAAAAAAAAAAgwF4BAAAgAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-07-06T10:48:55.879Z",
+              "WhenOpened": "2026-07-07T09:01:55.92Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "Authors.json",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\DataJson\\Authors.json",
-              "RelativeDocumentMoniker": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\DataJson\\Authors.json",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\DataJson\\Authors.json",
-              "RelativeToolTip": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\DataJson\\Authors.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAaAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-06T10:30:37.068Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ReservedItems.json",
-              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\DataJson\\ReservedItems.json",
-              "RelativeDocumentMoniker": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\DataJson\\ReservedItems.json",
-              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\DataJson\\ReservedItems.json",
-              "RelativeToolTip": "Src\\Infrastructure\\Mini_Project(Entitiy Framework).Persistence\\DataJson\\ReservedItems.json",
-              "ViewState": "AgIAAGIAAAAAAAAAAAAAABQBAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-07-06T10:07:36.892Z",
+              "DocumentIndex": 2,
+              "Title": "ConsoleAnimation.cs",
+              "DocumentMoniker": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Animations\\ConsoleAnimation.cs",
+              "RelativeDocumentMoniker": "Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Animations\\ConsoleAnimation.cs",
+              "ToolTip": "C:\\Users\\Asus\\Desktop\\Mini_Project(Entity)\\Mini_Project(Entitiy Framework)\\Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Animations\\ConsoleAnimation.cs",
+              "RelativeToolTip": "Presentation\\Mini_Project(Entitiy Framework).ConsoleApp\\Animations\\ConsoleAnimation.cs",
+              "ViewState": "AgIAAC4AAAAAAAAAAAAQwGYAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-07-07T08:59:41.074Z",
               "EditorCaption": ""
             }
           ]

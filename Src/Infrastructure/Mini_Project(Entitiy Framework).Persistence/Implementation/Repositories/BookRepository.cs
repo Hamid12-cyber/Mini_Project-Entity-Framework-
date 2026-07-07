@@ -32,6 +32,16 @@ public class BookRepository : GenericRepository<Book>, IBookRepository
             .Where(b => b.AuthorId == authorId)
             .ToList();
     }
+
+    public List<Book> SearchByName(string keyword)
+    {
+        return DbSet
+            .Include(b => b.Author)
+            .Where(b => b.Name.Contains(keyword))
+            .ToList();
+    }
+
+    // JSON backup-a həm Author, həm də ReservedItems (tam naviqasiya) daxil olsun.
     protected override List<Book> GetDataForBackup()
     {
         return DbSet

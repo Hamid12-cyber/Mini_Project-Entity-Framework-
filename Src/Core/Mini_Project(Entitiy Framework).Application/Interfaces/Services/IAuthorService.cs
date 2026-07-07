@@ -9,5 +9,8 @@ namespace Mini_Project_Entitiy_Framework_.Application.Interfaces.Services
         List<Author> GetAllAuthors();
         Author? GetAuthorById(int id);
         List<Book> GetAuthorBooks(int authorId);
+        Author UpdateAuthor(int id, string name, string? surname, Gender gender);
+        bool DeleteAuthor(int id);
+        List<Author> SearchAuthors(string keyword);
     }
 }

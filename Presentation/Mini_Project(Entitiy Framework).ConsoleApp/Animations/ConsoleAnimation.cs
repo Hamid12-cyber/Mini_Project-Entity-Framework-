@@ -108,22 +108,59 @@ namespace Mini_Project_Entitiy_Framework_.ConsoleApp.Animations
         {
             Console.Clear();
 
-            string border = new string('─', title.Length + 4);
+            // Ən uzun item-ə görə eni hesabla, amma çox da geniş olmasın deyə +2 sabit boşluq
+            int contentWidth = items
+                .Where(i => !i.StartsWith("##") && i != "---")
+                .Select(i => i.Length)
+                .DefaultIfEmpty(0)
+                .Max();
+
+            contentWidth = Math.Max(contentWidth, title.Length) + 2;
+
+            string fullBorder = new string('─', contentWidth);
+
+            // Əsas başlıq qutusu
+            Console.WriteLine();
             Console.ForegroundColor = Dim;
-            Console.WriteLine($"\n  ┌{border}┐");
-            Console.Write("  │  ");
+            Console.WriteLine($"  ┌{fullBorder}┐");
+            Console.Write("  │");
             Console.ForegroundColor = Bright;
-            Console.Write(title);
+            Console.Write(CenterText(title, contentWidth));
             Console.ForegroundColor = Dim;
-            Console.WriteLine("  │");
-            Console.WriteLine($"  └{border}┘\n");
+            Console.WriteLine("│");
+            Console.WriteLine($"  └{fullBorder}┘");
+            Console.WriteLine();
 
             foreach (string item in items)
             {
-                Console.ForegroundColor = Second;
-                Console.Write("  › ");
-                Console.ForegroundColor = Bright;
-                Console.WriteLine(item);
+                if (item.StartsWith("##"))
+                {
+                    // Bölmə başlığı — mətn ortada
+                    string headerText = item.Substring(2);
+
+                    Console.ForegroundColor = Dim;
+                    Console.WriteLine($"  ┌{fullBorder}┐");
+                    Console.Write("  │");
+                    Console.ForegroundColor = Primary;
+                    Console.Write(CenterText(headerText, contentWidth));
+                    Console.ForegroundColor = Dim;
+                    Console.WriteLine("│");
+                    Console.WriteLine($"  └{fullBorder}┘");
+                    Console.WriteLine();
+                }
+                else if (item == "---")
+                {
+                    Console.ForegroundColor = Dim;
+                    Console.WriteLine($"  {fullBorder}");
+                    Console.WriteLine();
+                }
+                else
+                {
+                    Console.ForegroundColor = Second;
+                    Console.Write("  › ");
+                    Console.ForegroundColor = Bright;
+                    Console.WriteLine(item);
+                }
             }
 
             Console.WriteLine();
@@ -132,6 +169,15 @@ namespace Mini_Project_Entitiy_Framework_.ConsoleApp.Animations
             Console.ForegroundColor = Bright;
             Console.Write("Seçim: ");
             Console.ResetColor();
+        }
+
+        private static string CenterText(string text, int width)
+        {
+            if (text.Length >= width) return text;
+            int totalPadding = width - text.Length;
+            int left = totalPadding / 2;
+            int right = totalPadding - left;
+            return new string(' ', left) + text + new string(' ', right);
         }
 
         public static void Success(string message)

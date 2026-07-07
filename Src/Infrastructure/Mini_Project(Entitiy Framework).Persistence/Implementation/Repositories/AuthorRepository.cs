@@ -25,5 +25,16 @@ public class AuthorRepository : GenericRepository<Author>, IAuthorRepository
             .Include(a => a.Books)
             .FirstOrDefault(a => a.Id == id);
     }
+
+    public List<Author> SearchByName(string keyword)
+    {
+        return DbSet
+            .Include(a => a.Books)
+            .Where(a => a.Name.Contains(keyword) ||
+                        (a.Surname != null && a.Surname.Contains(keyword)))
+            .ToList();
+    }
+
+    // JSON backup-a Author-un kitab siyahısı da (tam naviqasiya) daxil olsun.
     protected override List<Author> GetDataForBackup() => GetAllWithBooks();
 }

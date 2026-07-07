@@ -48,5 +48,25 @@ public class ReservedItemRepository : GenericRepository<ReservedItem>, IReserved
             r.BookId == bookId &&
             (r.Status == Status.Confirmed || r.Status == Status.Started));
     }
+
+    public List<int> GetActiveBookIds()
+    {
+        return DbSet
+            .Where(r => r.Status == Status.Confirmed || r.Status == Status.Started)
+            .Select(r => r.BookId)
+            .Distinct()
+            .ToList();
+    }
+
+    public List<ReservedItem> GetOverdue()
+    {
+        return DbSet
+            .Include(r => r.Book)
+            .Where(r => (r.Status == Status.Confirmed || r.Status == Status.Started) &&
+                        r.EndDate.Date < DateTime.Today)
+            .ToList();
+    }
+
+    // JSON backup-a Book (tam naviqasiya) daxil olsun.
     protected override List<ReservedItem> GetDataForBackup() => GetAllWithBook();
 }

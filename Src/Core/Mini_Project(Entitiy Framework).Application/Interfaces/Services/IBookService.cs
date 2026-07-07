@@ -9,5 +9,8 @@ namespace Mini_Project_Entitiy_Framework_.Application.Interfaces.Services
         bool DeleteBook(int id);
         Book? GetBookById(int id);
         List<Book> GetAllBooks();
+        Book UpdateBook(int id, string name, int pageCount, int authorId);
+        List<Book> SearchBooks(string keyword);
+        List<Book> GetAvailableBooks();
     }
 }

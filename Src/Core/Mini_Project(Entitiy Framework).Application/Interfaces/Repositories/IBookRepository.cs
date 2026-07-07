@@ -6,5 +6,6 @@ namespace Mini_Project_Entitiy_Framework_.Application.Interfaces.Repositories
         Book? GetByIdWithDetails(int id);
         List<Book> GetAllWithAuthor();
         List<Book> GetBooksByAuthorId(int authorId);
+        List<Book> SearchByName(string keyword);
     }
 }

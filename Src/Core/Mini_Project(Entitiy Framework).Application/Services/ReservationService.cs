@@ -3,6 +3,7 @@ using Mini_Project_Entitiy_Framework_.Domain.Enums;
 using Mini_Project_Entitiy_Framework_.Application.Exceptions;
 using Mini_Project_Entitiy_Framework_.Application.Interfaces.Repositories;
 using Mini_Project_Entitiy_Framework_.Application.Interfaces.Services;
+using System.Linq;
 
 namespace Mini_Project_Entitiy_Framework_.Application.Services;
 
@@ -28,12 +29,14 @@ public class ReservationService : IReservationService
         if (book is null)
             throw new NotFoundException($"Id-si {bookId} olan Book tapılmadı.");
 
+        // Tarix yoxlamaları
         if (startDate.Date < DateTime.Today)
             throw new ValidationException("Başlanğıc tarixi bugündən əvvəl ola bilməz.");
 
         if (endDate.Date <= startDate.Date)
             throw new ValidationException("Bitmə tarixi başlanğıc tarixindən sonra olmalıdır.");
 
+        // Kitab seçilmiş tarix aralığında artıq aktiv şəkildə rezerv olunubsa, icazə vermirik.
         var bookReservations = _reservedItemRepository.GetByBookId(bookId);
         var hasOverlap = bookReservations.Any(r =>
             (r.Status == Status.Confirmed || r.Status == Status.Started) &&
@@ -42,6 +45,7 @@ public class ReservationService : IReservationService
         if (hasOverlap)
             throw new BusinessRuleException("Bu kitab seçdiyiniz tarix aralığında artıq rezerv olunub.");
 
+        // Optional qayda: bir FinCode eyni anda maksimum 3 kitabı icarəyə götürə bilər.
         var activeUserReservations = _reservedItemRepository.GetActiveByFinCode(finCode);
         if (activeUserReservations.Count >= MaxActiveReservationsPerFinCode)
             throw new BusinessRuleException(
@@ -88,5 +92,40 @@ public class ReservationService : IReservationService
             throw new ValidationException("FinCode boş ola bilməz.");
 
         return _reservedItemRepository.GetByFinCode(finCode);
+    }
+
+    public bool CancelReservation(int reservationId)
+    {
+        var reservation = _reservedItemRepository.GetById(reservationId);
+        if (reservation is null)
+            throw new NotFoundException($"Id-si {reservationId} olan Reservation tapılmadı.");
+
+        if (reservation.Status == Status.Completed)
+            throw new BusinessRuleException("Tamamlanmış (Completed) rezervasiya ləğv edilə bilməz.");
+
+        if (reservation.Status == Status.Canceled)
+            throw new BusinessRuleException("Bu rezervasiya artıq ləğv edilib.");
+
+        reservation.Status = Status.Canceled;
+        _reservedItemRepository.Update(reservation);
+        _reservedItemRepository.SaveChanges();
+        return true;
+    }
+
+    public List<ReservedItem> GetOverdueReservations()
+    {
+        return _reservedItemRepository.GetOverdue();
+    }
+
+    public List<(Book Book, int Count)> GetMostReservedBooks(int topN = 5)
+    {
+        var items = _reservedItemRepository.GetAllWithBook();
+        return items
+            .Where(r => r.Book != null)
+            .GroupBy(r => r.Book)
+            .Select(g => (Book: g.Key, Count: g.Count()))
+            .OrderByDescending(x => x.Count)
+            .Take(topN)
+            .ToList();
     }
 }

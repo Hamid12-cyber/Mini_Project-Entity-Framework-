@@ -18,6 +18,9 @@ namespace Mini_Project_Entitiy_Framework_.Persistence.JsonServices
             _path = Path.Combine(solutionRoot, relativePathFromSolutionRoot);
             Directory.CreateDirectory(Path.GetDirectoryName(_path)!);
         }
+
+        // .slnx (və ya .sln) faylı tapılana qədər yuxarı qalxıb solution kökünü tapır.
+        // Bu üsul qovluq adlarının tam üst-üstə düşməsindən asılı deyil, ona görə daha etibarlıdır.
         private static string? FindSolutionRoot(string startDir)
         {
             var dir = new DirectoryInfo(startDir);

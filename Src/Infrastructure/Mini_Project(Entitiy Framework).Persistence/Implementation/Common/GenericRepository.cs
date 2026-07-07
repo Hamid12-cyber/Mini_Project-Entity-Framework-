@@ -29,6 +29,8 @@ namespace Mini_Project_Entitiy_Framework_.Persistence.Implementation.Common
 
         public void Delete(T entity) => DbSet.Remove(entity);
 
+        // SQL-ə yazıldıqdan sonra cari vəziyyət JSON-a da backup olaraq köçürülür.
+        // Fayla yazma (disk I/O) arxa planda gedir ki, istifadəçi nəticəni gözləməsin.
         public int SaveChanges()
         {
             var result = Context.SaveChanges();
@@ -38,6 +40,9 @@ namespace Mini_Project_Entitiy_Framework_.Persistence.Implementation.Common
 
             return result;
         }
+
+        // Naviqasiyalı (Include-lu) tam siyahını backup üçün qaytarır.
+        // Konkret repository-lər öz Include zəncirinə uyğun override edə bilər.
         protected virtual List<T> GetDataForBackup() => DbSet.ToList();
     }
 }

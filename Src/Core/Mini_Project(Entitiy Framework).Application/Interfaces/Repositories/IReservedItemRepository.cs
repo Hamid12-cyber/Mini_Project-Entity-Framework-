@@ -8,5 +8,7 @@ namespace Mini_Project_Entitiy_Framework_.Application.Interfaces.Repositories
         List<ReservedItem> GetActiveByFinCode(string finCode);
         List<ReservedItem> GetByBookId(int bookId);
         bool HasActiveReservation(int bookId);
+        List<int> GetActiveBookIds();
+        List<ReservedItem> GetOverdue();
     }
 }

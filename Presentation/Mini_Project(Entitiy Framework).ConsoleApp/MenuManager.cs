@@ -16,20 +16,33 @@ public class MenuManager
     private static bool _globalRunning = true;
 
     private static readonly string[] MenuItems =
-    {
-        "1.  Create Book",
-        "2.  Delete Book",
-        "3.  Get Book by Id",
-        "4.  Show All Books",
-        "5.  Create Author",
-        "6.  Show All Authors",
-        "7.  Show Author's Books",
-        "8.  Reserve Book",
-        "9.  Reservation List",
-        "10. Change Reservation Status",
-        "11. User's Reservations List",
-        "0.  Exit"
-    };
+  {
+    "##Book Services",
+    "1.  Create Book",
+    "2.  Delete Book",
+    "3.  Get Book by Id",
+    "4.  Show All Books",
+    "5.  Update Book",
+    "6.  Search Books",
+    "7.  Available Books",
+    "##Author Services",
+    "8.  Create Author",
+    "9.  Show All Authors",
+    "10. Show Author's Books",
+    "11. Update Author",
+    "12. Delete Author",
+    "13. Search Authors",
+    "##Reservation Services",
+    "14. Reserve Book",
+    "15. Reservation List",
+    "16. Change Reservation Status",
+    "17. User's Reservations List",
+    "18. Cancel Reservation",
+    "19. Overdue Reservations",
+    "20. Most Reserved Books",
+    "---",
+    "0.  Exit"
+};
 
     public MenuManager(IServiceProvider serviceProvider)
     {
@@ -59,13 +72,22 @@ public class MenuManager
                     case "2": Console.Clear(); ConsoleAnimation.Loading("Silmə paneli"); DeleteBook(_serviceProvider); break;
                     case "3": Console.Clear(); ConsoleAnimation.Loading("Axtarılır", 400); GetBookById(_serviceProvider); break;
                     case "4": Console.Clear(); ConsoleAnimation.Loading("Kitablar yüklənir"); ShowAllBooks(_serviceProvider); break;
-                    case "5": Console.Clear(); ConsoleAnimation.Loading("Müəllif yaradılır"); CreateAuthor(_serviceProvider); break;
-                    case "6": Console.Clear(); ConsoleAnimation.Loading("Müəlliflər yüklənir"); ShowAllAuthors(_serviceProvider); break;
-                    case "7": Console.Clear(); ConsoleAnimation.Loading("Kitablar yüklənir"); ShowAuthorBooks(_serviceProvider); break;
-                    case "8": Console.Clear(); ConsoleAnimation.Loading("Rezervasiya paneli"); ReserveBook(_serviceProvider); break;
-                    case "9": Console.Clear(); ConsoleAnimation.Loading("Siyahı yüklənir"); ShowReservationList(_serviceProvider); break;
-                    case "10": Console.Clear(); ConsoleAnimation.Loading("Status paneli"); ChangeReservationStatus(_serviceProvider); break;
-                    case "11": Console.Clear(); ConsoleAnimation.Loading("Tarixçə yüklənir"); ShowUserReservations(_serviceProvider); break;
+                    case "5": Console.Clear(); ConsoleAnimation.Loading("Kitab yenilənir"); UpdateBook(_serviceProvider); break;
+                    case "6": Console.Clear(); ConsoleAnimation.Loading("Axtarılır", 400); SearchBooks(_serviceProvider); break;
+                    case "7": Console.Clear(); ConsoleAnimation.Loading("Kitablar yüklənir"); ShowAvailableBooks(_serviceProvider); break;
+                    case "8": Console.Clear(); ConsoleAnimation.Loading("Müəllif yaradılır"); CreateAuthor(_serviceProvider); break;
+                    case "9": Console.Clear(); ConsoleAnimation.Loading("Müəlliflər yüklənir"); ShowAllAuthors(_serviceProvider); break;
+                    case "10": Console.Clear(); ConsoleAnimation.Loading("Kitablar yüklənir"); ShowAuthorBooks(_serviceProvider); break;
+                    case "11": Console.Clear(); ConsoleAnimation.Loading("Müəllif yenilənir"); UpdateAuthor(_serviceProvider); break;
+                    case "12": Console.Clear(); ConsoleAnimation.Loading("Silmə paneli"); DeleteAuthor(_serviceProvider); break;
+                    case "13": Console.Clear(); ConsoleAnimation.Loading("Axtarılır", 400); SearchAuthors(_serviceProvider); break;
+                    case "14": Console.Clear(); ConsoleAnimation.Loading("Rezervasiya paneli"); ReserveBook(_serviceProvider); break;
+                    case "15": Console.Clear(); ConsoleAnimation.Loading("Siyahı yüklənir"); ShowReservationList(_serviceProvider); break;
+                    case "16": Console.Clear(); ConsoleAnimation.Loading("Status paneli"); ChangeReservationStatus(_serviceProvider); break;
+                    case "17": Console.Clear(); ConsoleAnimation.Loading("Tarixçə yüklənir"); ShowUserReservations(_serviceProvider); break;
+                    case "18": Console.Clear(); ConsoleAnimation.Loading("Ləğv edilir"); CancelReservation(_serviceProvider); break;
+                    case "19": Console.Clear(); ConsoleAnimation.Loading("Yoxlanılır"); ShowOverdueReservations(_serviceProvider); break;
+                    case "20": Console.Clear(); ConsoleAnimation.Loading("Hesablanır"); ShowMostReservedBooks(_serviceProvider); break;
                     default:
                         ConsoleAnimation.Warning("Yanlış seçim, zəhmət olmasa yenidən cəhd edin.");
                         break;
@@ -86,7 +108,6 @@ public class MenuManager
         Console.Clear();
         ConsoleAnimation.Print("Proqram bitdi. Sağ olun!", ConsoleColor.White);
     }
-
     private static void PauseOnError()
     {
         ConsoleAnimation.Write("Davam etmək üçün istənilən düyməyə basın...", ConsoleColor.Yellow);
@@ -732,5 +753,398 @@ public class MenuManager
         ReservedItem.PrintHeader();
         foreach (var r in reservations) r.PrintInfo();
         ReservedItem.PrintFooter();
+    }
+    private static void UpdateBook(IServiceProvider provider)
+    {
+        Console.Clear();
+        ConsoleAnimation.Print("--- Kitabın Yenilənməsi ---\n", ConsoleColor.Yellow);
+        var bookService = provider.GetRequiredService<IBookService>();
+        var authorService = provider.GetRequiredService<IAuthorService>();
+
+        var books = bookService.GetAllBooks();
+        if (books.Count == 0)
+        {
+            ConsoleAnimation.Warning("Heç bir kitab yoxdur.");
+            return;
+        }
+
+        Book.PrintHeader();
+        foreach (var b in books) b.PrintInfo();
+        Book.PrintFooter();
+        Console.WriteLine();
+
+        int id;
+        while (true)
+        {
+            int status = InputInt("Yenilənəcək kitabın Id-si", out id);
+            if (status == -1 || status == 0) return;
+            if (status == 1) break;
+        }
+
+        var existing = books.FirstOrDefault(b => b.Id == id);
+        if (existing is null)
+        {
+            ConsoleAnimation.Error($"Id-si {id} olan kitab tapılmadı.");
+            return;
+        }
+
+        string name = existing.Name;
+        int pageCount = existing.PageCount;
+        int authorId = existing.AuthorId;
+
+        int step = 1;
+        while (step <= 3)
+        {
+            Console.Clear();
+            ConsoleAnimation.Print("--- Kitabın Yenilənməsi ---\n", ConsoleColor.Yellow);
+            Console.WriteLine($"Hazırkı ad: {existing.Name}");
+
+            if (step == 1)
+            {
+                int status = InputString("Yeni ad (dəyişməmək üçün Enter)", out var input);
+                if (status == -1 || status == 0) return;
+                if (status == 1) name = input;
+                step++;
+            }
+            else if (step == 2)
+            {
+                Console.WriteLine($"Hazırkı səhifə sayı: {existing.PageCount}");
+                int status = InputInt("Yeni səhifə sayı", out pageCount, min: 1);
+                if (status == -1) return;
+                if (status == 0) { step--; continue; }
+                if (status == 1) step++;
+            }
+            else if (step == 3)
+            {
+                var authors = authorService.GetAllAuthors();
+                Author.PrintHeader();
+                foreach (var a in authors) a.PrintInfo();
+                Author.PrintFooter();
+                Console.WriteLine();
+
+                int status = InputInt("Yeni Author Id", out authorId);
+                if (status == -1) return;
+                if (status == 0) { step--; continue; }
+                if (status == 1) step++;
+            }
+        }
+
+        try
+        {
+            bookService.UpdateBook(id, name, pageCount, authorId);
+            ConsoleAnimation.Success("Kitab uğurla yeniləndi.");
+        }
+        catch (Exception ex)
+        {
+            ConsoleAnimation.Error(ex.Message);
+        }
+    }
+
+    private static void UpdateAuthor(IServiceProvider provider)
+    {
+        Console.Clear();
+        ConsoleAnimation.Print("--- Müəllifin Yenilənməsi ---\n", ConsoleColor.Yellow);
+        var authorService = provider.GetRequiredService<IAuthorService>();
+
+        var authors = authorService.GetAllAuthors();
+        if (authors.Count == 0)
+        {
+            ConsoleAnimation.Warning("Heç bir author yoxdur.");
+            return;
+        }
+
+        Author.PrintHeader();
+        foreach (var a in authors) a.PrintInfo();
+        Author.PrintFooter();
+        Console.WriteLine();
+
+        int id;
+        while (true)
+        {
+            int status = InputInt("Yenilənəcək Author Id", out id);
+            if (status == -1 || status == 0) return;
+            if (status == 1) break;
+        }
+
+        var existing = authors.FirstOrDefault(a => a.Id == id);
+        if (existing is null)
+        {
+            ConsoleAnimation.Error($"Id-si {id} olan author tapılmadı.");
+            return;
+        }
+
+        string name = existing.Name;
+        string? surname = existing.Surname;
+        int genderChoice = existing.Gender switch
+        {
+            Gender.Female => 1,
+            Gender.Male => 2,
+            Gender.Other => 3,
+            _ => 4
+        };
+
+        int step = 1;
+        while (step <= 3)
+        {
+            Console.Clear();
+            ConsoleAnimation.Print("--- Müəllifin Yenilənməsi ---\n", ConsoleColor.Yellow);
+
+            if (step == 1)
+            {
+                Console.WriteLine($"Hazırkı ad: {existing.Name}");
+                int status = InputString("Yeni ad (dəyişməmək üçün Enter)", out var input);
+                if (status == -1 || status == 0) return;
+                if (status == 1) name = input;
+                step++;
+            }
+            else if (step == 2)
+            {
+                Console.WriteLine($"Hazırkı soyad: {existing.Surname}");
+                ConsoleAnimation.Print("(Əvvəlki addım: 0, Ana Menyu: 00)", ConsoleColor.Yellow);
+                ConsoleAnimation.Write("Yeni soyad (boş buraxıla bilər): ", ConsoleColor.White);
+                var surnameInput = Console.ReadLine();
+
+                if (surnameInput == "00") return;
+                if (surnameInput == "0") { step--; continue; }
+
+                if (!string.IsNullOrWhiteSpace(surnameInput))
+                    surname = surnameInput;
+                step++;
+            }
+            else if (step == 3)
+            {
+                Console.WriteLine($"Hazırkı cins: {existing.Gender}");
+                ConsoleAnimation.Print("\nCins seçin: 1-Female 2-Male 3-Other 4-Unknown", ConsoleColor.Yellow);
+                int status = InputInt("Seçim", out genderChoice, min: 1, max: 4);
+                if (status == -1) return;
+                if (status == 0) { step--; continue; }
+                if (status == 1) step++;
+            }
+        }
+
+        var gender = genderChoice switch
+        {
+            1 => Gender.Female,
+            2 => Gender.Male,
+            3 => Gender.Other,
+            _ => Gender.Unknown
+        };
+
+        try
+        {
+            authorService.UpdateAuthor(id, name, surname, gender);
+            ConsoleAnimation.Success("Author uğurla yeniləndi.");
+        }
+        catch (Exception ex)
+        {
+            ConsoleAnimation.Error(ex.Message);
+        }
+    }
+
+    private static void DeleteAuthor(IServiceProvider provider)
+    {
+        Console.Clear();
+        ConsoleAnimation.Print("--- Müəllifin Silinməsi ---\n", ConsoleColor.Yellow);
+        var authorService = provider.GetRequiredService<IAuthorService>();
+
+        var authors = authorService.GetAllAuthors();
+        if (authors.Count == 0)
+        {
+            ConsoleAnimation.Warning("Heç bir author yoxdur.");
+            return;
+        }
+
+        Author.PrintHeader();
+        foreach (var a in authors) a.PrintInfo();
+        Author.PrintFooter();
+        Console.WriteLine();
+
+        int id;
+        while (true)
+        {
+            int status = InputInt("Silinəcək Author Id", out id);
+            if (status == -1 || status == 0) return;
+            if (status == 1) break;
+        }
+
+        try
+        {
+            authorService.DeleteAuthor(id);
+            ConsoleAnimation.Success("Author uğurla silindi.");
+        }
+        catch (Exception ex)
+        {
+            ConsoleAnimation.Error(ex.Message);
+        }
+    }
+
+    private static void SearchBooks(IServiceProvider provider)
+    {
+        Console.Clear();
+        ConsoleAnimation.Print("--- Kitab Axtarışı (Ad ilə) ---\n", ConsoleColor.Yellow);
+        var bookService = provider.GetRequiredService<IBookService>();
+
+        string keyword;
+        while (true)
+        {
+            int status = InputString("Axtarış açar sözü", out keyword);
+            if (status == -1 || status == 0) return;
+            if (status == 1) break;
+        }
+
+        try
+        {
+            var results = bookService.SearchBooks(keyword);
+            if (results.Count == 0)
+            {
+                ConsoleAnimation.Warning("Uyğun kitab tapılmadı.");
+                return;
+            }
+
+            Book.PrintHeader();
+            foreach (var b in results) b.PrintInfo();
+            Book.PrintFooter();
+        }
+        catch (Exception ex)
+        {
+            ConsoleAnimation.Error(ex.Message);
+        }
+    }
+
+    private static void SearchAuthors(IServiceProvider provider)
+    {
+        Console.Clear();
+        ConsoleAnimation.Print("--- Müəllif Axtarışı (Ad ilə) ---\n", ConsoleColor.Yellow);
+        var authorService = provider.GetRequiredService<IAuthorService>();
+
+        string keyword;
+        while (true)
+        {
+            int status = InputString("Axtarış açar sözü", out keyword);
+            if (status == -1 || status == 0) return;
+            if (status == 1) break;
+        }
+
+        try
+        {
+            var results = authorService.SearchAuthors(keyword);
+            if (results.Count == 0)
+            {
+                ConsoleAnimation.Warning("Uyğun author tapılmadı.");
+                return;
+            }
+
+            Author.PrintHeader();
+            foreach (var a in results) a.PrintInfo();
+            Author.PrintFooter();
+        }
+        catch (Exception ex)
+        {
+            ConsoleAnimation.Error(ex.Message);
+        }
+    }
+
+    private static void ShowAvailableBooks(IServiceProvider provider)
+    {
+        Console.Clear();
+        ConsoleAnimation.Print("--- Boş (Rezerv Olunmamış) Kitablar ---\n", ConsoleColor.Yellow);
+        var bookService = provider.GetRequiredService<IBookService>();
+
+        var books = bookService.GetAvailableBooks();
+        if (books.Count == 0)
+        {
+            ConsoleAnimation.Warning("Hazırda boş kitab yoxdur.");
+            return;
+        }
+
+        Book.PrintHeader();
+        foreach (var b in books) b.PrintInfo();
+        Book.PrintFooter();
+    }
+
+    private static void CancelReservation(IServiceProvider provider)
+    {
+        Console.Clear();
+        ConsoleAnimation.Print("--- Rezervasiyanın Ləğvi ---\n", ConsoleColor.Yellow);
+        var reservationService = provider.GetRequiredService<IReservationService>();
+
+        var reservations = reservationService.GetReservationList();
+        if (reservations.Count == 0)
+        {
+            ConsoleAnimation.Warning("Heç bir rezervasiya yoxdur.");
+            return;
+        }
+
+        ReservedItem.PrintHeader();
+        foreach (var r in reservations) r.PrintInfo();
+        ReservedItem.PrintFooter();
+        Console.WriteLine();
+
+        int id;
+        while (true)
+        {
+            int status = InputInt("Ləğv ediləcək Reservation Id", out id);
+            if (status == -1 || status == 0) return;
+            if (status == 1) break;
+        }
+
+        try
+        {
+            reservationService.CancelReservation(id);
+            ConsoleAnimation.Success("Rezervasiya uğurla ləğv edildi.");
+        }
+        catch (Exception ex)
+        {
+            ConsoleAnimation.Error(ex.Message);
+        }
+    }
+
+    private static void ShowOverdueReservations(IServiceProvider provider)
+    {
+        Console.Clear();
+        ConsoleAnimation.Print("--- Müddəti Keçmiş Rezervasiyalar ---\n", ConsoleColor.Yellow);
+        var reservationService = provider.GetRequiredService<IReservationService>();
+
+        var overdue = reservationService.GetOverdueReservations();
+        if (overdue.Count == 0)
+        {
+            ConsoleAnimation.Success("Müddəti keçmiş rezervasiya yoxdur.");
+            return;
+        }
+
+        ReservedItem.PrintHeader();
+        foreach (var r in overdue) r.PrintInfo();
+        ReservedItem.PrintFooter();
+    }
+
+    private static void ShowMostReservedBooks(IServiceProvider provider)
+    {
+        Console.Clear();
+        ConsoleAnimation.Print("--- Ən Çox Rezerv Olunan Kitablar (Top 5) ---\n", ConsoleColor.Yellow);
+        var reservationService = provider.GetRequiredService<IReservationService>();
+
+        var stats = reservationService.GetMostReservedBooks(5);
+        if (stats.Count == 0)
+        {
+            ConsoleAnimation.Warning("Heç bir rezervasiya tapılmadı.");
+            return;
+        }
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("  ┌───────┬─────────────────────────┬───────────────┐");
+        Console.WriteLine("  │ ID    │ Ad                      │ Rezervasiya   │");
+        Console.WriteLine("  ├───────┼─────────────────────────┼───────────────┤");
+        Console.ResetColor();
+
+        foreach (var (book, count) in stats)
+        {
+            Console.ForegroundColor = ConsoleColor.White;
+            Console.WriteLine("  │ {0,-5} │ {1,-23} │ {2,-13} │", book.Id, book.Name, count);
+            Console.ResetColor();
+        }
+
+        Console.ForegroundColor = ConsoleColor.Yellow;
+        Console.WriteLine("  └───────┴─────────────────────────┴───────────────┘");
+        Console.ResetColor();
     }
 }

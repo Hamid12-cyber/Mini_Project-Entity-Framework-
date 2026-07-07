@@ -3,6 +3,7 @@ using Mini_Project_Entitiy_Framework_.Domain.Enums;
 using Mini_Project_Entitiy_Framework_.Application.Exceptions;
 using Mini_Project_Entitiy_Framework_.Application.Interfaces.Repositories;
 using Mini_Project_Entitiy_Framework_.Application.Interfaces.Services;
+using System.Linq;
 
 
 namespace Mini_Project_Entitiy_Framework_.Application.Services;
@@ -70,5 +71,45 @@ public class BookService : IBookService
     public List<Book> GetAllBooks()
     {
         return _bookRepository.GetAllWithAuthor();
+    }
+
+    public Book UpdateBook(int id, string name, int pageCount, int authorId)
+    {
+        if (string.IsNullOrWhiteSpace(name))
+            throw new ValidationException("Kitabın adı boş ola bilməz.");
+
+        if (pageCount <= 0)
+            throw new ValidationException("Səhifə sayı müsbət ədəd olmalıdır.");
+
+        var book = _bookRepository.GetById(id);
+        if (book is null)
+            throw new NotFoundException($"Id-si {id} olan Book tapılmadı.");
+
+        var author = _authorRepository.GetById(authorId);
+        if (author is null)
+            throw new NotFoundException($"Id-si {authorId} olan Author tapılmadı.");
+
+        book.Name = name.Trim();
+        book.PageCount = pageCount;
+        book.AuthorId = authorId;
+
+        _bookRepository.Update(book);
+        _bookRepository.SaveChanges();
+        return book;
+    }
+
+    public List<Book> SearchBooks(string keyword)
+    {
+        if (string.IsNullOrWhiteSpace(keyword))
+            throw new ValidationException("Axtarış açar sözü boş ola bilməz.");
+
+        return _bookRepository.SearchByName(keyword.Trim());
+    }
+
+    public List<Book> GetAvailableBooks()
+    {
+        var allBooks = _bookRepository.GetAllWithAuthor();
+        var activeBookIds = _reservedItemRepository.GetActiveBookIds();
+        return allBooks.Where(b => !activeBookIds.Contains(b.Id)).ToList();
     }
 }
