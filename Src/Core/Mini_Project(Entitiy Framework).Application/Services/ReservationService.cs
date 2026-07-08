@@ -29,14 +29,12 @@ public class ReservationService : IReservationService
         if (book is null)
             throw new NotFoundException($"Id-si {bookId} olan Book tapılmadı.");
 
-        // Tarix yoxlamaları
         if (startDate.Date < DateTime.Today)
             throw new ValidationException("Başlanğıc tarixi bugündən əvvəl ola bilməz.");
 
         if (endDate.Date <= startDate.Date)
             throw new ValidationException("Bitmə tarixi başlanğıc tarixindən sonra olmalıdır.");
 
-        // Kitab seçilmiş tarix aralığında artıq aktiv şəkildə rezerv olunubsa, icazə vermirik.
         var bookReservations = _reservedItemRepository.GetByBookId(bookId);
         var hasOverlap = bookReservations.Any(r =>
             (r.Status == Status.Confirmed || r.Status == Status.Started) &&
@@ -45,7 +43,6 @@ public class ReservationService : IReservationService
         if (hasOverlap)
             throw new BusinessRuleException("Bu kitab seçdiyiniz tarix aralığında artıq rezerv olunub.");
 
-        // Optional qayda: bir FinCode eyni anda maksimum 3 kitabı icarəyə götürə bilər.
         var activeUserReservations = _reservedItemRepository.GetActiveByFinCode(finCode);
         if (activeUserReservations.Count >= MaxActiveReservationsPerFinCode)
             throw new BusinessRuleException(
@@ -107,6 +104,36 @@ public class ReservationService : IReservationService
             throw new BusinessRuleException("Bu rezervasiya artıq ləğv edilib.");
 
         reservation.Status = Status.Canceled;
+        _reservedItemRepository.Update(reservation);
+        _reservedItemRepository.SaveChanges();
+        return true;
+    }
+    public bool UpdateReservationDates(int reservationId, DateTime newStartDate, DateTime newEndDate)
+    {
+        var reservation = _reservedItemRepository.GetById(reservationId);
+        if (reservation is null)
+            throw new NotFoundException($"Id-si {reservationId} olan Reservation tapılmadı.");
+
+        if (reservation.Status == Status.Canceled)
+            throw new BusinessRuleException("Ləğv edilmiş (Canceled) rezervasiyanın vaxtı dəyişdirilə bilməz.");
+
+        if (reservation.Status == Status.Completed)
+            throw new BusinessRuleException("Tamamlanmış (Completed) rezervasiyanın vaxtı dəyişdirilə bilməz.");
+
+        if (newEndDate.Date <= newStartDate.Date)
+            throw new ValidationException("Bitmə tarixi başlanğıc tarixindən sonra olmalıdır.");
+
+        var overlaps = _reservedItemRepository.GetByBookId(reservation.BookId)
+            .Any(r => r.Id != reservationId &&
+                      (r.Status == Status.Confirmed || r.Status == Status.Started) &&
+                      newStartDate.Date <= r.EndDate.Date && newEndDate.Date >= r.StartDate.Date);
+
+        if (overlaps)
+            throw new BusinessRuleException("Bu kitab seçdiyiniz yeni tarix aralığında artıq rezerv olunub.");
+
+        reservation.StartDate = newStartDate.Date;
+        reservation.EndDate = newEndDate.Date;
+
         _reservedItemRepository.Update(reservation);
         _reservedItemRepository.SaveChanges();
         return true;

@@ -5,11 +5,12 @@ namespace Mini_Project_Entitiy_Framework_.Application.Interfaces.Services
 {
     public interface IReservationService
     {
-        ReservedItem ReserveBook(int bookId, string finCode, DateTime startDate, DateTime endDate);       
+        ReservedItem ReserveBook(int bookId, string finCode, DateTime startDate, DateTime endDate);
         List<ReservedItem> GetReservationList();
         bool ChangeStatus(int reservationId, Status newStatus);
         List<ReservedItem> GetUserReservations(string finCode);
         bool CancelReservation(int reservationId);
+        bool UpdateReservationDates(int reservationId, DateTime newStartDate, DateTime newEndDate);
         List<ReservedItem> GetOverdueReservations();
         List<(Book Book, int Count)> GetMostReservedBooks(int topN = 5);
     }

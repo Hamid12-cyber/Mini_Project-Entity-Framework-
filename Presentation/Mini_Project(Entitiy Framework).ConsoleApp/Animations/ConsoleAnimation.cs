@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading;
+using System.Collections.Generic;
+using System.Linq;
 
 namespace Mini_Project_Entitiy_Framework_.ConsoleApp.Animations
 {
@@ -106,62 +108,73 @@ namespace Mini_Project_Entitiy_Framework_.ConsoleApp.Animations
 
         public static void PrintMenu(string title, string[] items)
         {
+            // NOT: "ONLINE LIBRARY" başlıq qutusu artıq burda çap OLUNMUR —
+            // o, yalnız SplashScreen()-də (proqram açılanda) bir dəfə görünür.
+            // "title" parametri geriyə uyğunluq üçün saxlanılıb, istifadə olunmur.
+
             Console.Clear();
 
-            // Ən uzun item-ə görə eni hesabla, amma çox da geniş olmasın deyə +2 sabit boşluq
-            int contentWidth = items
+            // İki sütunlu düzüm üçün ən uzun item-in uzunluğuna görə sütun eni hesabla
+            int colWidth = items
                 .Where(i => !i.StartsWith("##") && i != "---")
                 .Select(i => i.Length)
                 .DefaultIfEmpty(0)
-                .Max();
+                .Max() + 2;
 
-            contentWidth = Math.Max(contentWidth, title.Length) + 2;
+            int lineWidth = Math.Max(colWidth * 2 + 8, 20);
+            string thinLine = new string('─', lineWidth);
 
-            string fullBorder = new string('─', contentWidth);
+            var buffer = new List<string>();
 
-            // Əsas başlıq qutusu
-            Console.WriteLine();
-            Console.ForegroundColor = Dim;
-            Console.WriteLine($"  ┌{fullBorder}┐");
-            Console.Write("  │");
-            Console.ForegroundColor = Bright;
-            Console.Write(CenterText(title, contentWidth));
-            Console.ForegroundColor = Dim;
-            Console.WriteLine("│");
-            Console.WriteLine($"  └{fullBorder}┘");
+            void FlushGroup()
+            {
+                for (int i = 0; i < buffer.Count; i += 2)
+                {
+                    Console.ForegroundColor = Second;
+                    Console.Write("  › ");
+                    Console.ForegroundColor = Bright;
+                    Console.Write(i + 1 < buffer.Count ? buffer[i].PadRight(colWidth) : buffer[i]);
+
+                    if (i + 1 < buffer.Count)
+                    {
+                        Console.ForegroundColor = Second;
+                        Console.Write("› ");
+                        Console.ForegroundColor = Bright;
+                        Console.Write(buffer[i + 1]);
+                    }
+
+                    Console.WriteLine();
+                }
+                buffer.Clear();
+            }
+
             Console.WriteLine();
 
             foreach (string item in items)
             {
                 if (item.StartsWith("##"))
                 {
-                    // Bölmə başlığı — mətn ortada
+                    FlushGroup();
                     string headerText = item.Substring(2);
 
-                    Console.ForegroundColor = Dim;
-                    Console.WriteLine($"  ┌{fullBorder}┐");
-                    Console.Write("  │");
                     Console.ForegroundColor = Primary;
-                    Console.Write(CenterText(headerText, contentWidth));
-                    Console.ForegroundColor = Dim;
-                    Console.WriteLine("│");
-                    Console.WriteLine($"  └{fullBorder}┘");
+                    Console.WriteLine("  " + CenterWithDashes(headerText, lineWidth));
                     Console.WriteLine();
                 }
                 else if (item == "---")
                 {
+                    FlushGroup();
                     Console.ForegroundColor = Dim;
-                    Console.WriteLine($"  {fullBorder}");
+                    Console.WriteLine($"  {thinLine}");
                     Console.WriteLine();
                 }
                 else
                 {
-                    Console.ForegroundColor = Second;
-                    Console.Write("  › ");
-                    Console.ForegroundColor = Bright;
-                    Console.WriteLine(item);
+                    buffer.Add(item);
                 }
             }
+
+            FlushGroup();
 
             Console.WriteLine();
             Console.ForegroundColor = Primary;
@@ -171,6 +184,15 @@ namespace Mini_Project_Entitiy_Framework_.ConsoleApp.Animations
             Console.ResetColor();
         }
 
+        private static string CenterWithDashes(string text, int width)
+        {
+            int inner = width - text.Length - 2;
+            if (inner < 2) return $"── {text} ──";
+
+            int left = inner / 2;
+            int right = inner - left;
+            return new string('─', left) + $" {text} " + new string('─', right);
+        }
         private static string CenterText(string text, int width)
         {
             if (text.Length >= width) return text;

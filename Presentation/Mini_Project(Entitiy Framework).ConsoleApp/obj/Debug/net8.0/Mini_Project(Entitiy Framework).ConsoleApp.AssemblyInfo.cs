@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Mini_Project(Entitiy Framework).ConsoleApp")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b31724a8a33d8f61ab41a9dc095382f6ae407152")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+ba8106ce22bb22e3d24bccd099284f5843057982")]
 [assembly: System.Reflection.AssemblyProductAttribute("Mini_Project(Entitiy Framework).ConsoleApp")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Mini_Project(Entitiy Framework).ConsoleApp")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -40,6 +40,7 @@ public class MenuManager
     "18. Cancel Reservation",
     "19. Overdue Reservations",
     "20. Most Reserved Books",
+    "21. Update Reservation",
     "---",
     "0.  Exit"
 };
@@ -88,6 +89,7 @@ public class MenuManager
                     case "18": Console.Clear(); ConsoleAnimation.Loading("Ləğv edilir"); CancelReservation(_serviceProvider); break;
                     case "19": Console.Clear(); ConsoleAnimation.Loading("Yoxlanılır"); ShowOverdueReservations(_serviceProvider); break;
                     case "20": Console.Clear(); ConsoleAnimation.Loading("Hesablanır"); ShowMostReservedBooks(_serviceProvider); break;
+                    case "21": Console.Clear(); ConsoleAnimation.Loading("Vaxt yenilənir"); UpdateReservationTime(_serviceProvider); break;
                     default:
                         ConsoleAnimation.Warning("Yanlış seçim, zəhmət olmasa yenidən cəhd edin.");
                         break;
@@ -621,7 +623,16 @@ public class MenuManager
                 int status = InputDate("Bitmə tarixi (dd.MM.yyyy)", out endDate);
                 if (status == -1) return;
                 if (status == 0) { step--; continue; }
-                if (status == 1) step++;
+                if (status == 1)
+                {
+                    if (endDate <= startDate)
+                    {
+                        ConsoleAnimation.Error("Bitmə tarixi başlanğıc tarixi ilə eyni və ya ondan əvvəl ola bilməz! Zəhmət olmasa yenidən daxil edin.");
+                        PauseOnError();
+                        continue; 
+                    }
+                    step++;
+                }
             }
         }
 
@@ -1146,5 +1157,82 @@ public class MenuManager
         Console.ForegroundColor = ConsoleColor.Yellow;
         Console.WriteLine("  └───────┴─────────────────────────┴───────────────┘");
         Console.ResetColor();
+    }
+    private static void UpdateReservationTime(IServiceProvider provider)
+    {
+        var reservationService = provider.GetRequiredService<IReservationService>();
+        var reservations = reservationService.GetReservationList();
+
+        int id = 0;
+        ReservedItem? selected = null;
+        DateTime newStart = DateTime.MinValue;
+        DateTime newEnd = DateTime.MinValue;
+
+        int step = 1;
+        while (step <= 3)
+        {
+            Console.Clear();
+            ConsoleAnimation.Print("--- Rezervasiya Vaxtının Dəyişdirilməsi ---\n", ConsoleColor.Yellow);
+
+            if (step == 1)
+            {
+                if (reservations.Count == 0)
+                {
+                    ConsoleAnimation.Warning("Heç bir rezervasiya yoxdur.");
+                    return;
+                }
+
+                ReservedItem.PrintHeader();
+                foreach (var r in reservations) r.PrintInfo();
+                ReservedItem.PrintFooter();
+                Console.WriteLine();
+
+                int status = InputInt("Vaxtı dəyişdiriləcək Reservation Id", out id);
+                if (status == -1 || status == 0) return;
+                if (status == 1)
+                {
+                    selected = reservations.FirstOrDefault(r => r.Id == id);
+                    if (selected is null)
+                    {
+                        ConsoleAnimation.Error($"Id-si {id} olan rezervasiya tapılmadı.");
+                        Console.ReadLine();
+                        continue;
+                    }
+                    step++;
+                }
+            }
+            else if (step == 2)
+            {
+                ReservedItem.PrintHeader();
+                selected!.PrintInfo();
+                ReservedItem.PrintFooter();
+                Console.WriteLine($"\nHazırkı başlanğıc tarixi: {selected.StartDate:dd.MM.yyyy}");
+
+                int status = InputDate("Yeni başlanğıc tarixi (dd.MM.yyyy)", out newStart);
+                if (status == -1) return;
+                if (status == 0) { step--; continue; }
+                if (status == 1) step++;
+            }
+            else if (step == 3)
+            {
+                Console.WriteLine($"Yeni başlanğıc tarixi: {newStart:dd.MM.yyyy}");
+                Console.WriteLine($"Hazırkı bitmə tarixi: {selected!.EndDate:dd.MM.yyyy}");
+
+                int status = InputDate("Yeni bitmə tarixi (dd.MM.yyyy)", out newEnd);
+                if (status == -1) return;
+                if (status == 0) { step--; continue; }
+                if (status == 1) step++;
+            }
+        }
+
+        try
+        {
+            reservationService.UpdateReservationDates(id, newStart, newEnd);
+            ConsoleAnimation.Success("Rezervasiyanın vaxtı uğurla yeniləndi.");
+        }
+        catch (Exception ex)
+        {
+            ConsoleAnimation.Error(ex.Message);
+        }
     }
 }
